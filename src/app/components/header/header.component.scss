@@ -1,0 +1,17 @@
+@import 'src/colors.scss';
+header {
+    background-color: $light;
+    display: flex;
+    .navLink {
+        padding: 1em;
+        cursor: pointer;
+        height: 100%;
+        &:hover {
+            background-color: $solid;
+            color: $lightest;
+        }
+        &.active {
+            background-color: $solid;
+        }
+    }
+}

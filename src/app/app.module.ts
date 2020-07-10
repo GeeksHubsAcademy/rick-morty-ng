@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CharacterListComponent } from './containers/character-list/character-list.component';
 import { CharacterDetailComponent } from './containers/character-detail/character-detail.component';
+import { Error404Component } from './containers/error404/error404.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CharacterListComponent,
-    CharacterDetailComponent
+    CharacterDetailComponent,
+    Error404Component,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
