@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { CharacterResponse } from 'src/app/interfaces/response.type';
-import { map } from 'rxjs/operators';
 import { Character } from '../models/character.model';
 @Injectable({
   providedIn: 'root'
@@ -23,5 +22,8 @@ export class CharacterService {
       .subscribe(res => {
         this.characterSubject.next(res.results);
       });
+  }
+  getCharacter(id: number): Observable<Character> {
+    return this.httpClient.get<Character>(this.API_BASE_URL + '/character/' + id);
   }
 }

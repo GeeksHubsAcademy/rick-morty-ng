@@ -1,5 +1,6 @@
-<div class="characters">
-    <div class="character" *ngFor="let character of (characters$ | async)">
+<mat-spinner *ngIf="(characters$ | async)?.length===0"></mat-spinner>
+<div class="characters" *ngIf="(characters$ | async)?.length>0">
+    <div class="character" *ngFor="let character of (characters$ | async)" [routerLink]="['/characters',character.id]">
         <h5>
             {{character.name}}</h5>
         <!-- <img src="{{character.image}}" alt=""> -->

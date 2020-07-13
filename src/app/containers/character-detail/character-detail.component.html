@@ -1,1 +1,6 @@
-<p>character-detail works!</p>
+<div class="character-detail" *ngIf="character">
+    <h4>{{character.name}}</h4>
+    <img [src]="character.image" alt="">
+    <p>Specie: {{character.species}}</p>
+    <p>Gender: {{character.gender}}</p>
+</div>

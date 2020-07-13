@@ -7,7 +7,8 @@ import { CharacterListComponent } from './containers/character-list/character-li
 import { CharacterDetailComponent } from './containers/character-detail/character-detail.component';
 import { Error404Component } from './containers/error404/error404.component';
 import { HeaderComponent } from './components/header/header.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,9 @@ import { HeaderComponent } from './components/header/header.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
